@@ -8,8 +8,10 @@ if($keyword){
 	$docs = $search->setQuery($keyword)->search();
 	echo "<ul>";
 	foreach($docs as $key=>$doc){
+		$id = $doc->id;
+		$desc = $doc->desc;
 		$title = $search->highlight($doc->title);
-		echo "<li>$title</li>";
+		echo "<li><b>{$id}:{$title}</b><br/>描述:<br/>{$desc}</li>";
 	}
 	echo "</ul>";
 }
