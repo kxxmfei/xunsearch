@@ -1,5 +1,5 @@
 <?php
-require './lib/XS.php';   //  引入 xunsearch sdk
+require './xs_sdk/lib/XS.php';   //  引入 xunsearch sdk
 $keyword = trim($_POST['keyword']);
 if($keyword){
 	$xs = new xs('test');  // test  为项目名称，配置文件是：$sdk/app/test.ini
